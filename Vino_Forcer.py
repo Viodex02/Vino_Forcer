@@ -338,6 +338,10 @@ async def main():
         else:
             await listener(args.ip_addr,args.port)
 
+def cli():
+    import asyncio
+    asyncio.run(main())
+
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    cli()
