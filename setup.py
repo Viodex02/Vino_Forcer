@@ -1,15 +1,15 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='Vine_Forcer',
     version='1.0',
-    packages=find_packages(),   # يستخدم جميع الباكيجات في المجلد
+    py_modules=['Vino_Forcer'],  # اسم الملف بدون .py
     install_requires=[
         'httpx',
     ],
     entry_points={
         'console_scripts': [
-            'vine_forcer=Vino_Forcer:cli',  # دالة cli في Vino_Forcer.py
+            'vine_forcer=Vino_Forcer:cli',  # دالة cli في الملف Vino_Forcer.py
         ],
     },
     python_requires='>=3.11',
